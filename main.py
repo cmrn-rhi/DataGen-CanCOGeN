@@ -290,5 +290,5 @@ def generate_data_file(file_name, rows, delimiter):
     return df.to_csv(file_name, sep=',', index=False)
   
 #generate_data_file('COVID19_Metadata_v0.95_Sample_Complete_v.csv', 
-#                   5, 'comma')
+#                   25, 'comma')
   
