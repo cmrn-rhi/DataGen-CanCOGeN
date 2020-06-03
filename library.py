@@ -6,6 +6,8 @@ Version: 1.1
 COVID-19 Template Version: 0.95
 Date: 2020/06/03
 
+Python v 3.8.3
+
 @author: Rhiannon Cameron
          orcid.org/0000-0002-9578-0788
 """
