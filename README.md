@@ -10,7 +10,7 @@ For generation of CanCOGeN metadata to test applications.
 
 ## Technologies
 Project is created with:
-* Python version: 3.7
+* Python version: 3.8.3
 
 ## Files
 * main.py - for generating delimited csv files.
