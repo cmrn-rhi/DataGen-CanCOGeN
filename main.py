@@ -1,10 +1,10 @@
-# -*- coding: utf-8 -*-
+
 """
 Generate COVID19 CanCOGen Metadata
 
-Version: 1.0
+Version: 1.1
 COVID-19 Template Version: 0.95
-Date: 2020/06/01
+Date: 2020/06/03
 
 @author: Rhiannon Cameron
          orcid.org/0000-0002-9578-0788
@@ -289,6 +289,6 @@ def generate_data_file(file_name, rows, delimiter):
   else:
     return df.to_csv(file_name, sep=',', index=False)
   
-
-#generate_data_file('COVID19_Metadata_v0.95_Sample_Complete_v3.0.csv', 
-  #                 50, 'comma')
+#generate_data_file('COVID19_Metadata_v0.95_Sample_Complete_v.csv', 
+#                   5, 'comma')
+  

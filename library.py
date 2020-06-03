@@ -1,10 +1,10 @@
-# -*- coding: utf-8 -*-
+
 """
 Generate COVID19 CanCOGen Metadata Function Library
 
-Version: 1.0
+Version: 1.1
 COVID-19 Template Version: 0.95
-Date: 2020/06/01
+Date: 2020/06/03
 
 @author: Rhiannon Cameron
          orcid.org/0000-0002-9578-0788
