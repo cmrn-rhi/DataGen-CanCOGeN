@@ -7,6 +7,7 @@
 
 ## General Info
 For generation of CanCOGeN metadata to test applications.
+Current Version: 1.1
 
 ## Technologies
 Project is created with:
