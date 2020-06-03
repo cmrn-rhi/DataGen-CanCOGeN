@@ -11,7 +11,7 @@ For generation of CanCOGeN metadata to test applications.
 
 ## Technologies
 Project is created with:
-* Python version: 3.7
+* Python version: 3.8.3
 
 ## How-To
 Run the following in cmd when files are in current directory:
