@@ -16,6 +16,7 @@ import library as lib
 import pandas as pd
 import random
 import os
+from sys import argv
 
 # generate dictionary with CanCOGeN labels as keys.
 covid_vars = lib.generate_covid19_vars()
@@ -290,7 +291,7 @@ def generate_data_file(file_name, rows, delimiter):
     return df.to_csv(file_name, sep='\t', index=False)
   else:
     return df.to_csv(file_name, sep=',', index=False)
-  
-generate_data_file('COVID19_Metadata_v0.95_Sample_Complete_v.csv', 
-                  5, 'comma')
+
+# for running script from command line.
+generate_data_file(argv[1], int(argv[2]), argv[3])
   
