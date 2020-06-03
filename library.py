@@ -19,7 +19,7 @@ import uuid
 
 def generate_covid19_dict(covid19_vocab):
   """
-  Generate a dictionary of the CANCOGeN COVID19 vocabulary
+  Generate a dictionary of the CanCOGeN COVID19 vocabulary
 
   given: csv file where the first row contains column headers, and each column
          lists items from the CanCOGeN pick-lists or theoretical answers for
