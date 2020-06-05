@@ -2,9 +2,9 @@
 """
 Generate COVID19 CanCOGen Metadata Function Library
 
-Version: 1.1
+Version: 1.2
 COVID-19 Template Version: 0.95
-Date: 2020/06/03
+Date: 2020/06/05
 
 Python v 3.8.3
 
@@ -839,9 +839,9 @@ def random_n50():
   """
   Generate Random N50
   
-  return: float, rounded to two decimal places.
+  return: int.
   """
-  return round(random.uniform(10,5000), 2)
+  return round(random.randint(10,5000), 2)
 
 # Ns per 100 kbp
 def random_ns_100kbp():
@@ -850,7 +850,7 @@ def random_ns_100kbp():
   
   return: float, rounded to two decimal places.
   """
-  return round(random.randint(0,1000), 2)
+  return round(random.uniform(0,1000), 2)
 
 
 # consensus sequence ID
