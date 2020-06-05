@@ -2,9 +2,9 @@
 """
 Generate COVID19 CanCOGen Metadata
 
-Version: 1.1
+Version: 1.2
 COVID-19 Template Version: 0.95
-Date: 2020/06/03
+Date: 2020/06/05
 
 Python v 3.8.3
 
@@ -29,9 +29,9 @@ for key in covid_vars:
 
 def make_row():
   """
-  Generate Row of Metadata
+  Generate Row of CanCOGeN Metadata
   
-  return: a list of one rows of fake CanCOGeN metadata.
+  return: a list of one rows of fake metadata.
   """
   # Database Identifiers
   
@@ -293,5 +293,5 @@ def generate_data_file(file_name, rows, delimiter):
     return df.to_csv(file_name, sep=',', index=False)
 
 # for running script from command line.
-generate_data_file(argv[1], int(argv[2]), argv[3])
+# generate_data_file(argv[1], int(argv[2]), argv[3])
   
