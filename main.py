@@ -2,8 +2,8 @@
 """
 Generate COVID19 CanCOGen Metadata
 
-Version: 1.2
-COVID-19 Template Version: 0.95
+Version: 1.3
+COVID-19 Template Version: 0.96
 Date: 2020/06/05
 
 Python v 3.8.3
@@ -293,5 +293,4 @@ def generate_data_file(file_name, rows, delimiter):
     return df.to_csv(file_name, sep=',', index=False)
 
 # for running script from command line.
-# generate_data_file(argv[1], int(argv[2]), argv[3])
-  
+generate_data_file(argv[1], int(argv[2]), argv[3])

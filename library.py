@@ -2,8 +2,8 @@
 """
 Generate COVID19 CanCOGen Metadata Function Library
 
-Version: 1.2
-COVID-19 Template Version: 0.95
+Version: 1.3
+COVID-19 Template Version: 0.96
 Date: 2020/06/05
 
 Python v 3.8.3
@@ -15,6 +15,7 @@ Python v 3.8.3
 import pandas as pd
 import random
 from faker import Faker
+import datetime
 import string
 import uuid
 
@@ -211,16 +212,51 @@ def random_address():
 # sample collection date
 # sample received date
 # symptom onset date
-def random_date():
+def random_date(error=False):
   """
   Generate Random Date
   
-  return: string containing random date in ISO 8601 standard "YYYY-MM-DD", 
-          "YYYY-MM", or "YYYY".
+  error: boolean; True will generate invalid data, False will generate valid 
+         data.
+  return: string containing random date, in ISO 8601 standard "YYYY-MM-DD" or 
+          "YYYY-MM" format, from 2019-12 to the present year.
   """
-  # YYYY-MM-DD from current year.
-  date = Faker().date_this_year()
-  return random.choice([date, str(date)[0:7], str(date)[0:4]])
+  # start date around time of initial COVID19 cases.
+  start_date = datetime.date(year=2019, month=12, day=1)
+  # generate date between start date and today.
+  date = Faker().date_between(start_date, end_date='today')
+  
+  # output invalid date format.
+  if error:
+   
+    while True:
+                 
+      joiner = random.choice(['-','/',' ',''])   
+      year = random.choice([str(date)[0:4],str(date)[2:4]])
+      month_names = ['January','February','March','April','May','June','July',
+                     'August','September','October','November','December']
+      month = random.choice([str(date)[5:7], random.choice(month_names), 
+                             random.choice(month_names)[0:3], 
+                             random.choice(month_names)[0]])      
+      day_names = ['Monday','Tuesday','Wednesday','Thursday','Friday',
+                   'Saturday','Sunday']
+      day = random.choice([str(date)[8:10], random.choice(day_names), 
+                           random.choice(day_names)[0:3]])      
+      options = [year, month, day]      
+      # randomize order of items in options.
+      random.shuffle(options)
+      # join date components together.
+      invalid_date = joiner.join(options)
+      # check that date isn't in a valid format: YYYY-MM-DD or YYYY-MM.
+      valid_dates = [str(date)[0:7], str(date)]
+      
+      if invalid_date not in valid_dates:
+        return invalid_date
+  
+  # output valid ISO 8601 standard date format.
+  else:
+    # return date in YYYY-MM-DD or YYYY-MM.
+    return random.choice([date, str(date)[0:7]])
 
 
 # geo_loc_name_country
