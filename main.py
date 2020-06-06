@@ -294,3 +294,4 @@ def generate_data_file(file_name, rows, delimiter):
 
 # for running script from command line.
 generate_data_file(argv[1], int(argv[2]), argv[3])
+
