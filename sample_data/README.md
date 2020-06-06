@@ -1,5 +1,8 @@
 # Generated Sample Metadata
 
+## Using Validator 
+When using these datasets with the [covid19ValidationGrid](https://github.com/Public-Health-Bioinformatics/covid19ValidationGrid) you need to add an initial row labelled 'Database Identifiers' (2020-JUN-05).
+
 ## COVID19 data simulating CanCOGeN metadata template fields.
 
 **Complete** = All fields completed.
