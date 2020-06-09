@@ -16,7 +16,7 @@ Project is created with:
 ## How-To
 Run the following in cmd when files are in current directory:
 
-`$ python main.py <file-name.csv> <int for number of rows to generate> <'comma' or 'tab' deliminter>`
+`$ python main.py <file-name.csv> <int for number of rows to generate> <'comma' or 'tab' delimiter>`
 
 ## Files
 * **main.py** - for generating delimited csv files.
