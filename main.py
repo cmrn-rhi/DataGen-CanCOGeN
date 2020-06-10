@@ -14,7 +14,6 @@ Python v 3.8.3
 
 import library as lib
 import pandas as pd
-import random
 import os
 from sys import argv
 
@@ -325,5 +324,3 @@ def generate_data_file(file_name, rows, delimiter):
 
 # for running script from command line.
 generate_data_file(argv[1], int(argv[2]), argv[3])
-
-
