@@ -2,9 +2,9 @@
 """
 Generate COVID19 CanCOGen Metadata Function Library
 
-Version: 1.4
+Version: 1.5
 COVID-19 Vocab Version #39
-Date: 2020/06/09
+Date: 2020/06/10
 
 Python v 3.8.3
 

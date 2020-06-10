@@ -2,9 +2,9 @@
 """
 Generate COVID19 CanCOGen Metadata
 
-Version: 1.4
+Version: 1.5
 COVID-19 Vocab Version #39
-Date: 2020/06/09
+Date: 2020/06/10
 
 Python v 3.8.3
 
@@ -260,32 +260,63 @@ def check_file_name(file_name):
   """
   if os.path.isfile(file_name):
       expand = 1
+      
       while True:
-          expand += 1        
-          new_file_name = (file_name.split(".csv")[0] + "-" + str(expand) + 
-                           ".csv")
-          if os.path.isfile(new_file_name):
-              continue
-          else:
-              return new_file_name
+          expand += 1      
+          
+          if ".tsv" in file_name:
+            new_file_name = (file_name.split(".tsv")[0] + "-" + str(expand) + 
+                             ".tsv")
+            if os.path.isfile(new_file_name):
+                continue
+            else:
+                return new_file_name
+
+          elif ".csv" in file_name:
+            new_file_name = (file_name.split(".csv")[0] + "-" + str(expand) + 
+                             ".csv")
+            if os.path.isfile(new_file_name):
+                continue
+            else:
+                return new_file_name
               
   return file_name
-
+              
 
 def generate_data_file(file_name, rows, delimiter):
   """
   Generate Sample Metadata File
   
-  given: string containing file name, number of rows to generate, and delimiter..
-  return: csv delimited data file.
+  given: string containing file name, number of rows to generate, and delimiter.
+  return: csv or tsv delimited data file.
   """
+  # check that filename will not overwrite existing file, append number to the 
+  # end if filename already exists.
+  if delimiter == 'tab':
+    # save as tsv if using tab delimiter
+    file_name = check_file_name(file_name + '.tsv')
+  else:
+    # save as csv if using comma delimiter
+    file_name = check_file_name(file_name + '.csv')
   
-  file_name = check_file_name(file_name)
+  # CanCOGeN category headers.
+  category_headers = ['Database Identifiers','','','','','','','','',
+                      'Sample collection and processing','','','','','','','',
+                      '','','','','','','','','','','','','','','','','',
+                      '','','Host Information','','','','','','','','','',
+                      '','Host exposure information','','','Sequencing','',
+                      '','','','','','Bioinformatics and QC metrics','','','',
+                      '','','','','','','','','','','','','','','','','','','',
+                      '','','','Pathogen diagnostic testing','','','','','',
+                      'Contributor acknowledgement']
   
-  df = pd.DataFrame(columns=covid_var_names)
-  
+  # make category headers first row.
+  df = pd.DataFrame(columns=category_headers)
+  # make column headers second row.
+  df.loc[0] = covid_var_names  
+  # generate rows of data, add one to avoid overwriting column headers row.
   for i in range(rows):
-    df.loc[i] = make_row()
+    df.loc[i+1] = make_row()
   
   if delimiter == 'tab':
     return df.to_csv(file_name, sep='\t', index=False)
