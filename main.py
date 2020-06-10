@@ -2,9 +2,9 @@
 """
 Generate COVID19 CanCOGen Metadata
 
-Version: 1.3
-COVID-19 Template Version: 0.96
-Date: 2020/06/05
+Version: 1.4
+COVID-19 Vocab Version #39
+Date: 2020/06/09
 
 Python v 3.8.3
 
@@ -47,10 +47,9 @@ def make_row():
   
   # Sample Collection and Processing
   
-  sample_collected_by = lib.random_name()
+  sample_collected_by = lib.random_agency()
   sample_collector_contact_email = lib.random_email()
   sample_collector_contact_address = lib.random_address()
-  sequence_submitted_by = lib.random_name()
   sequence_submitter_contact_email = lib.random_email()
   sequence_submitter_contact_address = lib.random_address()
   sample_collection_date = lib.random_date()
@@ -153,6 +152,7 @@ def make_row():
                                  geo_loc_name_province_territory,
                                  geo_loc_name_city)
   irida_sample_name = specimen_collector_sample_id
+  sequence_submitted_by = sample_collected_by
   library_id = lib.random_library_id(specimen_collector_sample_id)
   isolate = specimen_collector_sample_id
   assembly_name = lib.random_assembly_name(specimen_collector_sample_id)
@@ -294,4 +294,5 @@ def generate_data_file(file_name, rows, delimiter):
 
 # for running script from command line.
 generate_data_file(argv[1], int(argv[2]), argv[3])
+
 
