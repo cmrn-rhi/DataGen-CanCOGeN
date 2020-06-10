@@ -2,9 +2,9 @@
 """
 Generate COVID19 CanCOGen Metadata Function Library
 
-Version: 1.3
-COVID-19 Template Version: 0.96
-Date: 2020/06/05
+Version: 1.4
+COVID-19 Vocab Version #39
+Date: 2020/06/09
 
 Python v 3.8.3
 
@@ -18,6 +18,7 @@ from faker import Faker
 import datetime
 import string
 import uuid
+from num2words import num2words
 
 
 def generate_covid19_dict(covid19_vocab):
@@ -174,16 +175,15 @@ def random_ref_genome():
 
 # sample collected by
 # sequence submitter by
-def random_name():
+def random_agency():
   """
-  Generate Random Name
+  Generate Random Sample Collection Agency
   
-  return: string containing random first and last name, occasionally with title.
+  return: string referencing a Canadian Public Health agency.
   """
-  # localized Faker provider packages without accents.
-  local_ascii_no_accents = ['ar_EG','bs_BA','en_AU','en_CA','en_GB',
-                            'en_IN','en_NZ','en_US']
-  return Faker(local_ascii_no_accents).name()
+  agency = random.choice(covid19_vocab_dict.get('agencies'))
+  return agency
+
 
 Faker('en_GB').name()
 # sample collector contact email
@@ -218,8 +218,10 @@ def random_date(error=False):
   
   error: boolean; True will generate invalid data, False will generate valid 
          data.
-  return: string containing random date, in ISO 8601 standard "YYYY-MM-DD" or 
-          "YYYY-MM" format, from 2019-12 to the present year.
+  return: string containing valid random date, in ISO 8601 standard 
+          "YYYY-MM-DD", from 2019-12 to the present year; or a string of an 
+          invalid date format and/or a non-existant day (e.g. Jun 31).
+          
   """
   # start date around time of initial COVID19 cases.
   start_date = datetime.date(year=2019, month=12, day=1)
@@ -247,16 +249,16 @@ def random_date(error=False):
       random.shuffle(options)
       # join date components together.
       invalid_date = joiner.join(options)
-      # check that date isn't in a valid format: YYYY-MM-DD or YYYY-MM.
-      valid_dates = [str(date)[0:7], str(date)]
+      # check that date isn't in valid YYYY-MM-DDf ormat.
+      valid_dates = [str(date)]
       
       if invalid_date not in valid_dates:
         return invalid_date
   
   # output valid ISO 8601 standard date format.
   else:
-    # return date in YYYY-MM-DD or YYYY-MM.
-    return random.choice([date, str(date)[0:7]])
+    # return date in YYYY-MM-DD.
+    return random.choice([date])
 
 
 # geo_loc_name_country
@@ -443,7 +445,8 @@ def passage_method_text():
   return: string containing sentence of random words.
   """
   words = random.randint(2,10) # less than 10 words.
-  return (' '.join(Faker().words(words)) + '.').capitalize()
+  text = (' '.join(Faker().words(words)) + '.').capitalize()
+  return random.choice([text, 'not applicable'])
 
 
 # biomaterial extracted
@@ -509,16 +512,26 @@ def random_host_disease():
 
 
 # host age
-def random_host_age():
+def random_host_age(error=False):
   """
   Generate Random Host Age
   
-  return: string containing numerical age or range of ages from CanCOGeN 
-          vocabulary.
+  error: boolean; True will generate invalid data, False will generate valid 
+         data.
+  return: string containing a valid numerical age; or an invalid 'range of ages'
+          or age as text.
+          
   """
-  age_range = random.choice(covid19_vocab_dict.get('host_age'))
-  age_year = random.randint(0,105)
-  return random.choice([age_range,str(age_year)])
+  age = random.randint(0,105)
+  
+  # output invalid date format.
+  if error:
+    age_range = random.choice(covid19_vocab_dict.get('host_age'))
+    age_text = num2words(age)
+    return random.choice([age_range, age_text])
+  
+  # output valid date format.
+  return str(age)
 
 
 # host gender
@@ -982,6 +995,18 @@ def random_pcr_ct_val():
   return: string.
   """
   return str(random.randint(1,40))
+
+
+def random_name():
+  """
+  Generate Random Name
+  
+  return: string containing random first and last name, occasionally with title.
+  """
+  # localized Faker provider packages without accents.
+  local_ascii_no_accents = ['ar_EG','bs_BA','en_AU','en_CA','en_GB',
+                            'en_IN','en_NZ','en_US']
+  return Faker(local_ascii_no_accents).name()
 
 
 # authors
