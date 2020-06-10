@@ -1,4 +1,4 @@
-# DataGen-CanCOGeN v1.4
+# DataGen-CanCOGeN v1.5
 
 ## Table of contents
 * [General Info](#General-Info)
@@ -16,7 +16,13 @@ Project is created with:
 ## How-To
 Run the following in cmd when files are in current directory:
 
-`$ python main.py <file-name.csv> <int for number of rows to generate> <'comma' or 'tab' delimiter>`
+`$ python main.py <file-name> <int for number of rows to generate> <'comma' or 'tab' delimiter>`
+
+<'tab'> delimiter will save file as <.csv>
+
+<'comma'> delimiter will save file as <.csv>
+
+Defaults to 'comma' delimiter if no delimiter is specified.
 
 ## Files
 * **main.py** - for generating delimited csv files.

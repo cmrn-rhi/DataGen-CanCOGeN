@@ -18,10 +18,10 @@ Azerbaijan,,,Oropharynx (OP),,Hospital gown,Production Facility,Rinsing,Urine Co
 Bahamas,,,Lower respiratory tract,,Light switch,School,Scraping,Virus Transport Medium,Missing,,,,,,,Headache,,,,VeroE6/TMPRSS2 cell line,,,Illumina MiniSeq,,ABI xl2500 protocol,,,,Alberta Health services
 Bahrain,,,Bronchus,,Locker,Subway train,Swabbing,Not Applicable,,,,,,,,Hemoptysis,,,,Not Applicable,,,Illumina MiSeq,,,,,,Interlake-Eastern Regional Health Authority
 Baker Island,,,Lung,,N95 mask,Wet market,Finger Prick,Missing,,,,,,,,Hypogeusia,,,,Missing,,,NextSeq 500,,,,,,Northern Regional Health Authority
-Bangladesh,,,Bronchiole,,Nurse call button,Not Applicable,Wash,,,,,,,,,Hyposmia,,,,,,,NextSeq 550,,,,,,Southern Health-Santé Sud
+Bangladesh,,,Bronchiole,,Nurse call button,Not Applicable,Wash,,,,,,,,,Hyposmia,,,,,,,NextSeq 550,,,,,,Southern Health-Sante Sud
 Barbados,,,Alveolar sac,,Paper,Missing,Washout Tear Collection,,,,,,,,,Hypotension (low blood pressure),,,,,,,Pacific Biosciences,,,,,,Prairie Mountain Health
 Bassas da India,,,Pleural sac,,Particulate matter,,Not Applicable,,,,,,,,,Hypoxemia,,,,,,,PacBio RS,,,,,,Winnipeg Regional Health Authority
-Belarus,,,Pleural cavity,,Plastic,,Missing,,,,,,,,,Irritability,,,,,,,PacBio RS II,,,,,,Vitalité Health Network
+Belarus,,,Pleural cavity,,Plastic,,Missing,,,,,,,,,Irritability,,,,,,,PacBio RS II,,,,,,Vitalite Health Network
 Belgium,,,Trachea,,PPE gown,,,,,,,,,,,Loss of speech,,,,,,,PacBio Sequel,,,,,,Horizon Health Network
 Belize,,,Not Applicable,,Sewage,,,,,,,,,,,Loss of taste,,,,,,,PacBio Sequel II,,,,,,Central Health
 Benin,,,Missing,,Sink,,,,,,,,,,,Low appetite,,,,,,,Ion Torrent,,,,,,Eastern Health
@@ -55,24 +55,24 @@ Comoros,,,,,,,,,,,,,,,,,,,,,,,,,,,,,North West LHIN
 Cook Islands,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Health PEI
 Coral Sea Islands,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Saskatchewan Health Authority
 Costa Rica,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Yukon Territory Health Region
-Cote d'Ivoire,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région de l’Abitibi-Témiscamingue
-Croatia,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région de l’Estrie
-Cuba,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région de l’Outaouais
-Curacao,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région de la Capitale-Nationale
-Cyprus,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région de la Chaudière-Appalaches
-Czech Republic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région de la Côte-Nord
-Democratic Republic of the Congo,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région de la Gaspésie-Îles-de-la-Madeleine
-Denmark,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région de la Mauricie et du Centre-du-Québec
-Djibouti,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région de la Montérégie
-Dominica,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région de Lanaudière
-Dominican Republic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région de Laval
-Ecuador,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région de Montréal-Centre
-Egypt,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région des Laurentides
-El Salvador,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région des Terres-Cries-de-la-Baie-James
-Equatorial Guinea,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région du Bas-Saint-Laurent
-Eritrea,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région du Nord-du-Québec
-Estonia,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région du Nunavik
-Eswatini,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Région du Saguenay - Lac-Saint-Jean
+Cote d'Ivoire,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region de l’Abitibi-Temiscamingue
+Croatia,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region de l’Estrie
+Cuba,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region de l’Outaouais
+Curacao,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region de la Capitale-Nationale
+Cyprus,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region de la Chaudiere-Appalaches
+Czech Republic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region de la Cote-Nord
+Democratic Republic of the Congo,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region de la Gaspesie-Iles-de-la-Madeleine
+Denmark,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region de la Mauricie et du Centre-du-Quebec
+Djibouti,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region de la Monteregie
+Dominica,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region de Lanaudiere
+Dominican Republic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region de Laval
+Ecuador,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region de Montreal-Centre
+Egypt,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region des Laurentides
+El Salvador,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region des Terres-Cries-de-la-Baie-James
+Equatorial Guinea,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region du Bas-Saint-Laurent
+Eritrea,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region du Nord-du-Quebec
+Estonia,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region du Nunavik
+Eswatini,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Region du Saguenay - Lac-Saint-Jean
 Ethiopia,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Public Health Agency of Canada
 Europa Island,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Provinicial Health Services Authority
 Falkland Islands (Islas Malvinas),,,,,,,,,,,,,,,,,,,,,,,,,,,,,
