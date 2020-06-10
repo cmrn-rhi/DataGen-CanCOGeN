@@ -1,4 +1,4 @@
-# DataGen-CanCOGeN v1.3
+# DataGen-CanCOGeN v1.4
 
 ## Table of contents
 * [General Info](#General-Info)
@@ -21,5 +21,5 @@ Run the following in cmd when files are in current directory:
 ## Files
 * **main.py** - for generating delimited csv files.
 * **library.py** - library of functions for use in main.py.
-* **vocab-lists.csv** - lists CanCOGeN COVID19 picklist vocabularies and additional lists for imitation data generation (yellow header).
+* **vocab-lists.csv** - lists CanCOGeN COVID19 picklist vocabularies and additional lists for imitation data generation.
 * **variables.csv** - lists CanCOGeN COVID19 variable names.
