@@ -2,7 +2,7 @@
 """
 Generate COVID19 CanCOGen Metadata Function Library
 
-Version: 1.5
+Version: 1.6
 COVID-19 Vocab Version #39
 Date: 2020/06/10
 
@@ -512,7 +512,7 @@ def random_host_disease():
 
 
 # host age
-def random_host_age(error=False):
+def random_host_age(invalid_data):
   """
   Generate Random Host Age
   
@@ -525,13 +525,13 @@ def random_host_age(error=False):
   age = random.randint(0,105)
   
   # output invalid date format.
-  if error:
+  if 'age_error' in invalid_data:
     age_range = random.choice(covid19_vocab_dict.get('host_age'))
     age_text = num2words(age)
-    return random.choice([age_range, age_text])
+    return random.choice([age_range, age_text]), 'age_error'
   
   # output valid date format.
-  return str(age)
+  return str(age), 'VALID'
 
 
 # host gender
