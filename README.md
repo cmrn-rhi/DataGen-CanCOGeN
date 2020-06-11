@@ -1,4 +1,4 @@
-# DataGen-CanCOGeN v1.5
+# DataGen-CanCOGeN v1.6
 
 ## Table of contents
 * [General Info](#General-Info)
