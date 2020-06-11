@@ -1,4 +1,4 @@
-# DataGen-CanCOGeN v1.6
+# DataGen-CanCOGeN v1.7
 
 ## Table of contents
 * [General Info](#General-Info)
@@ -23,6 +23,8 @@ Run the following in cmd when files are in current directory:
 <'comma'> delimiter will save file as <.csv>
 
 Defaults to 'comma' delimiter if no delimiter is specified.
+
+'In-progress: How-to specify error requests for the error-grid output.'
 
 ## Files
 * **main.py** - for generating delimited csv files.
