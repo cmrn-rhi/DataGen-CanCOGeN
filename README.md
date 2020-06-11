@@ -24,7 +24,7 @@ Run the following in cmd when files are in current directory:
 
 Defaults to 'comma' delimiter if no delimiter is specified.
 
-'In-progress: How-to specify error requests for the error-grid output.'
+*In-progress: How-to specify error requests for the error-grid output.*
 
 ## Files
 * **main.py** - for generating delimited csv files.
